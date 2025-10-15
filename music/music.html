@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .lyrics{
+            font-size: 20px;
+            margin-bottom: 10px;
+            background-color:rgb(170, 170, 194);
+            height: px;
+            width: 50%;    
+            line-height: 40px;
+            text-align: center;
+        }      
+        #lyrics-container2{      
+            color: rgb(30, 105, 190);
+        }
+    </style>
+</head>
+<body>
+    <h1>世末歌者</h1>
+  <div id="lyrics-container" class="lyrics">
+<br>
+        <div id="lyrics-container1" class="lyrics-line"></div>
+        <div id="lyrics-container2" class="lyrics-line"></div>
+        <div id="lyrics-container3" class="lyrics-line"></div>
+        <br>
+  </div>
+    <audio src="世末歌者.mp3" controls></audio>
+    <script>
+        const audio=document.querySelector('audio')
+        const container=document.getElementById('lyrics-container')
+        const lyricsContainer1=document.getElementById('lyrics-container1')
+        const lyricsContainer2=document.getElementById('lyrics-container2')
+        const lyricsContainer3=document.getElementById('lyrics-container3')
+        audio.addEventListener('play',function(){
+            audio.addEventListener('timeupdate',function(){
+                for(let i=0;i<lyrics.length;i++){
+                    if(audio.currentTime>lyrics[i].time&&i>0&&i<lyrics.length-1){
+                        lyricsContainer1.textContent=lyrics[i-1].text
+                        lyricsContainer2.textContent=lyrics[i].text
+                        lyricsContainer3.textContent=lyrics[i+1].text
+                    }
+                }
+            })
+        })
+        
+        
+
+        const lyrics=[
+            { text:'' },
+            { time:0.000,text:'作词 : COP' },
+            { time:13.070,text:'蝉时雨 化成淡墨渲染暮色' },
+            { time:17.840,text:'渗透着 勾勒出足迹与车辙' },
+            { time:22.990,text:'欢笑声 与漂浮的水汽饱和' },
+            { time:28.010,text:'隔着窗 同城市一并模糊了' },
+            { time:33.020,text:'拨弄着 旧吉他 哼着四拍子的歌' },
+            { time:38.180,text:'回音中 一个人 仿佛颇悠然自得' },
+            { time:43.110,text:'等凉雨 的温度 将不安燥热中和' },
+            { time:48.150,text:'寻觅着 风的波折' },
+            { time:52.840,text:'我仍然在无人问津的阴雨霉湿之地' },
+            { time:57.550,text:'和着雨音 唱着没有听众的歌曲' },
+            { time:62.870,text:'人潮仍是漫无目的地向目的地散去' },
+            { time:68.340,text:'忙碌着 无为着 继续' },
+            { time:73.100,text:'等待着谁能够将我的心房轻轻叩击' },
+            { time:77.950,text:'即使是你 也仅仅驻足了片刻便离去' },
+            { time:82.960,text:'想着或许 下个路口会有谁与我相遇' },
+            { time:88.520,text:'哪怕只 一瞬的 奇迹' },
+            { time:115.080,text:'夏夜空 出现在遥远的记忆' },
+            { time:120.010,text:'绽放的 璀璨花火拥着繁星' },
+            { time:125.210,text:'消失前 做出最温柔的给予' },
+            { time:130.190,text:'一如那些模糊身影的别离' },
+            { time:135.390,text:'困惑着 拘束着 如城市池中之鱼' },
+            { time:140.370,text:'或哽咽 或低泣 都融进了泡沫里' },
+            { time:145.480,text:'拖曳疲惫身躯 沉入冰冷的池底' },
+            { time:150.860,text:'注视着 色彩褪去' },
+            { time:154.860,text:'我仍然在无人问津的阴雨霉湿之地' },
+            { time:159.550,text:'和着雨音 唱着没有听众的歌曲' },
+            { time:164.900,text:'人潮仍是漫无目的地向目的地散去' },
+            { time:170.560,text:'忙碌着 无为着 继续' },
+            { time:175.190,text:'祈求着谁能够将我的心房轻轻叩击' },
+            { time:180.020,text:'今天的你 是否会留意并尝试去靠近' },
+            { time:185.130,text:'因为或许 下个路口仍是同样的结局' },
+            { time:190.900,text:'不存在 刹那的 奇迹' },
+            { time:197.370,text:'极夜与永昼' },
+            { time:202.380,text:'别离与欢聚' },
+            { time:207.430,text:'脉搏与呼吸' },
+            { time:212.450,text:'找寻着意义' },
+            { time:218.180,text:'我仍然在无人问津的阴雨霉湿之地' },
+            { time:223.160,text:'和着雨音 唱着卖不出去的歌曲' },
+            { time:228.470,text:'浮游之人也挣扎不已执着存在下去' },
+            { time:233.040,text:'追逐着 梦想着 继续' },
+            { time:238.340,text:'请别让我独自匍匐于滂沱世末之雨' },
+            { time:243.530,text:'和着雨音 唱着见证终结的歌曲' },
+            { time:248.690,text:'人们终于 结束了寻觅呆滞伫立原地' },
+            { time:254.310,text:'哭泣着 乞求着 奇迹' },
+            { time:258.860,text:'用这双手 拨出残缺染了锈迹的弦音' },
+            { time:263.700,text:'都隐没于淋漓的雨幕无声无息' },
+            { time:268.890,text:'曲终之时 你是否便会回应我的心音' },
+            { time:274.730,text:'将颤抖的双手牵起' },
+            { time:279.800,text:'迎来每个人的结局' }, 
+            { text:'' },         
+        ]
+    </script>
+</body>
+</html>
