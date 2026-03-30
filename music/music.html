@@ -181,7 +181,7 @@
 </head>
 <body>
 <div class="player-card">
-    <h1>🎵 世末歌者</h1>
+    <h1>世末歌者</h1>
 
     <div class="lyrics-wrapper">
         <div id="lyrics-container" class="lyrics">
@@ -354,7 +354,7 @@
                 }
                 
                 // 更新状态提示 (可选)
-                statusTip.textContent = `🎤 正在播放: ${lyricsData[activeIndex].text.substring(0, 28)}${lyricsData[activeIndex].text.length > 28 ? '…' : ''}`;
+                statusTip.textContent = `正在播放: ${lyricsData[activeIndex].text.substring(0, 28)}${lyricsData[activeIndex].text.length > 28 ? '…' : ''}`;
             }
         }
     }
@@ -396,7 +396,7 @@
     // ---------- 播放开始时额外重置状态 (解决拖拽/切换后滚动不同步) ----------
     function onPlayStart() {
         syncLyricsAndScroll();
-        statusTip.textContent = '🎶 歌声流淌，歌词随节奏滚动中';
+        statusTip.textContent = '🎶';
     }
     
     function onPause() {
